@@ -28,7 +28,7 @@ body {
     /* Other way I found to keep the aspect ratio: */
     /* aspect-ratio: var(--ar-width) / var(--ar-height);
     max-height: 100vh; */
-    background-color: var(--color-background);
+    /* background-color: var(--color-background); */
     margin: 0 auto;
 }
 
@@ -39,9 +39,11 @@ header {
 
 @media (min-width: 480px) {
     header {
-        background-image: url("images/boat.jpg");
+        background-image: url("images/yacht.jpg");
         background-size: 100%;
-        background-position: 50%;
+
+        /* background-image: url("images/boat.jpg"); */
+        /* background-position: 50%; */
     }
 }
 
@@ -69,7 +71,7 @@ header {
     border: 2px solid black;
     border-radius: 10px;
     background-color: lightgray;
-    font-family:  'Menlo', monospace;
+    font-family: 'Menlo', monospace;
 }
 
 footer {
