@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.content {
+    width: min(100vw, 55vh);
+    height: min(100vh, 360vw);
+    background-color: gray;
+    margin: 0 auto;
+}
