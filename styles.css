@@ -1,8 +1,10 @@
 :root {
+    /* Background colors */
     --color-title: #b0c3ab;
     --color-background: #cbc9c8;
     --color-footer: #98c2f0;
 
+    /* Aspect ratio */
     --ar-width: 10;
     --ar-height: 18;
 
@@ -25,12 +27,11 @@ body {
 .content {
     width: min(100vw, calc(100vh * (var(--ar-width) / var(--ar-height))));
     height: min(100vh, calc(var(--ar-height) * 10vw));
-    /* Other way I found to keep the aspect ratio: */
-    /* aspect-ratio: var(--ar-width) / var(--ar-height);
-    max-height: 100vh; */
-    /* background-color: var(--color-background); */
     margin: 0 auto;
 }
+
+
+/* Header */
 
 header {
     height: calc(100% * (4 / var(--ar-height)));
@@ -39,13 +40,19 @@ header {
 
 @media (min-width: 480px) {
     header {
-        background-image: url("images/yacht.jpg");
+        background-image: url("images/boat.jpg");
         background-size: 100%;
-
-        /* background-image: url("images/boat.jpg"); */
-        /* background-position: 50%; */
+        background-position: 50%;
     }
 }
+
+#header-title {
+    padding: 1em;
+    font-family: 'Menlo', monospace;
+}
+
+
+/* Play Field */
 
 #playfield {
     height: calc(100% * (10 / var(--ar-height)));
@@ -54,32 +61,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
-}
-
-#buttons {
-    height: calc(100% * (3 / var(--ar-height)));
-    background-color: var(--color-title);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.button {
-    width: 30%;
-    height: 50%;
-    font-size: 1.5em;
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: lightgray;
-    font-family: 'Menlo', monospace;
-}
-
-footer {
-    height: calc(100% * (1 / var(--ar-height)));
-    background-color: var(--color-footer);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .cell {
@@ -168,14 +149,39 @@ footer {
     background-position: 100% 50%;
 }
 
-#header-title {
-    padding: 1em;
+
+/* Buttons */
+
+#buttons {
+    height: calc(100% * (3 / var(--ar-height)));
+    background-color: var(--color-title);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.button {
+    width: 30%;
+    height: 50%;
+    font-size: 1.5em;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: lightgray;
     font-family: 'Menlo', monospace;
-    /* background-color: aqua; */
+}
+
+
+/* Footer */
+
+footer {
+    height: calc(100% * (1 / var(--ar-height)));
+    background-color: var(--color-footer);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #footer-title {
     padding: 1em;
     font-family: 'Menlo', monospace;
-    /* background-color: aqua; */
 }
